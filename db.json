@@ -1,19 +1,14 @@
 {
-  "posts": [
+  "buy": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "item": "Auberginen",
+      "qty": 2,
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "item": "Mangold",
+      "qty": 1,
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
