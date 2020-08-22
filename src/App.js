@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { getBuys } from "./api/buy";
 
 function App() {
+  const [buys, setBuys] = useState(null);
+
+  useEffect(() => {
+    const fetchBuys = async () => {
+      const buys = await getBuys();
+      setBuys(buys);
+    };
+    fetchBuys();
+  }, []);
+
   return (
-    <div>
-      <header>BUY</header>
-      <body>
-        <li>Bananen</li>
-        <li>Aubergine</li>
-      </body>
-      <footer>AddBuy</footer>
+    <div className="App">
+      {buys?.map((buy) => (
+        <div key={buys.id}>{buy.item}</div>
+      ))}
     </div>
   );
 }
