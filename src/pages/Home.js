@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { getBuys } from "../api/buy";
 import { Link } from "react-router-dom";
 import cartPlusSrc from "../assets/cartPlus.svg";
+import cartMinusSrc from "../assets/cartMinus.svg";
 import "./Home.css";
+import StyledHeader from "../components/StyledHeader";
 
 function Home() {
   const [buys, setBuys] = useState(null);
@@ -17,9 +19,9 @@ function Home() {
 
   return (
     <div className="home">
-      <header>
+      <StyledHeader>
         <h1>BUY</h1>
-      </header>
+      </StyledHeader>
       <main>
         {buys?.map((buy) => (
           <div key={buy.id}>
@@ -30,6 +32,7 @@ function Home() {
       </main>
       <footer>
         <Link to="/add">
+          <img className="cartMinus" src={cartMinusSrc} alt="cart plus" />
           <img className="cartPlus" src={cartPlusSrc} alt="cart plus" />
         </Link>
       </footer>

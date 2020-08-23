@@ -41,7 +41,6 @@ function AddBuy() {
           </label>
           <input type="submit" value="ADD BUY" />
         </form>
-        <li></li>
       </main>
       <footer>
         <Link to="/">BUY</Link>
