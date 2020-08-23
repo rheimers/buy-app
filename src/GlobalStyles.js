@@ -19,9 +19,19 @@ function GlobalStyles() {
           font-family: "Work Sans", sans-serif;
           font-weight: 300;
         }
+
         header {
           font-family: "Montserrat", sans-serif;
           font-weight: 900;
+          h1 {
+            margin: 0px;
+            margin-top: 1em;
+          }
+          h2 {
+            margin: 0px;
+            margin-bottom: 1em;
+            font-size: 18px;
+          }
         }
         :root {
           background-color: #fff7e6;
