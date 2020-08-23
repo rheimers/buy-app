@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { postBuy } from "../api/buy";
 
 function AddBuy() {
   const [item, setItem] = useState("");
@@ -12,9 +13,14 @@ function AddBuy() {
   function handleQtyChange(event) {
     setQty(event.target.value);
   }
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    alert("Submitted" + item + qty);
+    await postBuy({
+      item,
+      qty,
+    });
+    setItem("");
+    setQty("");
   }
 
   return (
