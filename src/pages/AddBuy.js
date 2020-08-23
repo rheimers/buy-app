@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { postBuy } from "../api/buy";
+import StyledHeader from "../components/StyledHeader";
 
 function AddBuy() {
   const [item, setItem] = useState("");
@@ -25,10 +26,9 @@ function AddBuy() {
 
   return (
     <>
-      <header>
-        <h1>BUY</h1>
-        <h2>more</h2>
-      </header>
+      <StyledHeader>
+        <h1>BUY</h1> <h2>more</h2>
+      </StyledHeader>
       <main>
         <form onSubmit={handleSubmit}>
           <label>
