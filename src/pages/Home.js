@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getBuys } from "../api/buy";
 import { Link } from "react-router-dom";
+import cartPlusSrc from "../assets/cartPlus.svg";
+import "./Home.css";
 
 function Home() {
   const [buys, setBuys] = useState(null);
@@ -27,7 +29,9 @@ function Home() {
         ))}
       </main>
       <footer>
-        <Link to="/add">ADD BUY</Link>
+        <Link to="/add">
+          <img className="cartPlus" src={cartPlusSrc} alt="cart plus" />
+        </Link>
       </footer>
     </div>
   );
