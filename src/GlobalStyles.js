@@ -15,7 +15,8 @@ function GlobalStyles() {
           font-style: normal;
           src: url("https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300");
         }
-        main {
+        main,
+        footer {
           font-family: "Work Sans", sans-serif;
           font-weight: 300;
         }

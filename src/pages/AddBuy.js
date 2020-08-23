@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { postBuy } from "../api/buy";
 import StyledHeader from "../components/StyledHeader";
+import StyledFooter from "../components/StyledFooter";
+import backSrc from "../assets/back.svg";
 
 function AddBuy() {
   const [item, setItem] = useState("");
@@ -31,20 +33,21 @@ function AddBuy() {
       </StyledHeader>
       <main>
         <form onSubmit={handleSubmit}>
-          <label>
-            Item:
-            <input value={item} onChange={handleItemChange} />
-          </label>
-          <label>
-            QTY:
-            <input value={qty} onChange={handleQtyChange} />
-          </label>
+          <input
+            placeholder="Product"
+            value={item}
+            onChange={handleItemChange}
+          />
+          <input placeholder="Qty" value={qty} onChange={handleQtyChange} />
           <input type="submit" value="ADD BUY" />
         </form>
       </main>
-      <footer>
-        <Link to="/">BUY</Link>
-      </footer>
+      <StyledFooter>
+        <h2>Let's go</h2>
+        <Link to="/">
+          <img className="back" src={backSrc} alt="back arrow" />
+        </Link>
+      </StyledFooter>
     </>
   );
 }
