@@ -9,6 +9,11 @@
       "item": "Mangold",
       "qty": 1,
       "id": 2
+    },
+    {
+      "item": "Schalotten",
+      "qty": "1 Netz",
+      "id": 3
     }
   ]
 }

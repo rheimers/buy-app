@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import { getBuys } from "./api/buy";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AddBuy from "./pages/AddBuy";
 
 function App() {
-  const [buys, setBuys] = useState(null);
-
-  useEffect(() => {
-    const fetchBuys = async () => {
-      const buys = await getBuys();
-      setBuys(buys);
-    };
-    fetchBuys();
-  }, []);
-
   return (
-    <div className="App">
-      {buys?.map((buy) => (
-        <div key={buys.id}>{buy.item}</div>
-      ))}
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/add">
+          <AddBuy />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
