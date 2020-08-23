@@ -20,7 +20,10 @@ function Home() {
       </header>
       <main>
         {buys?.map((buy) => (
-          <div key={buy.id}>{buy.item}</div>
+          <div key={buy.id}>
+            {buy.item}
+            {buy.qty}
+          </div>
         ))}
       </main>
       <footer>
