@@ -24,7 +24,7 @@ function GlobalStyles() {
           font-weight: 900;
         }
         :root {
-          --highlight-Color: #4462ff;
+          background-color: #fff7e6;
         }
       `}
     />
