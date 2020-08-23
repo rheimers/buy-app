@@ -19,6 +19,7 @@ function GlobalStyles() {
         footer {
           font-family: "Work Sans", sans-serif;
           font-weight: 300;
+          overflow: auto;
         }
 
         header {
