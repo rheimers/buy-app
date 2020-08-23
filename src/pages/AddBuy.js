@@ -25,18 +25,27 @@ function AddBuy() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Item:
-          <input value={item} onChange={handleItemChange} />
-        </label>
-        <label>
-          QTY:
-          <input value={qty} onChange={handleQtyChange} />
-        </label>
-        <input type="submit" value="ADD BUY" />
-      </form>
-      <Link to="/">BUY</Link>
+      <header>
+        <h1>BUY</h1>
+        <h2>more</h2>
+      </header>
+      <main>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Item:
+            <input value={item} onChange={handleItemChange} />
+          </label>
+          <label>
+            QTY:
+            <input value={qty} onChange={handleQtyChange} />
+          </label>
+          <input type="submit" value="ADD BUY" />
+        </form>
+        <li></li>
+      </main>
+      <footer>
+        <Link to="/">BUY</Link>
+      </footer>
     </>
   );
 }

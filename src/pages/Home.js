@@ -14,11 +14,18 @@ function Home() {
   }, []);
 
   return (
-    <div className="App">
-      <Link to="/add">ADD BUY</Link>
-      {buys?.map((buy) => (
-        <div key={buy.id}>{buy.item}</div>
-      ))}
+    <div className="home">
+      <header>
+        <h1>BUY</h1>
+      </header>
+      <main>
+        {buys?.map((buy) => (
+          <div key={buy.id}>{buy.item}</div>
+        ))}
+      </main>
+      <footer>
+        <Link to="/add">ADD BUY</Link>
+      </footer>
     </div>
   );
 }
