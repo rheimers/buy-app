@@ -1,0 +1,17 @@
+.cartPlus {
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+}
+
+.cartMinus {
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+}
+
+.back {
+  width: 2em;
+  height: 2em;
+  object-fit: contain;
+}
